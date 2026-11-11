@@ -32,7 +32,7 @@ jobs:
 
       - name: Snyk Code test - our own code (block high)
         if: always()
-        run: snyk code test --severity-threshold=high
+        run: snyk code test --severity-threshold=high --org=tolulana49
 
       - name: Snyk monitor (send to dashboard with ownership tags)
         if: always() && github.event_name != 'pull_request'
